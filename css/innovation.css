@@ -9,10 +9,10 @@ main .title > h2{
     font-size:3.1rem;
     color:#e43737;
 }
-main >{}
-.button{
-
-    
+/* main >{} */
+.button a:nth-child(1).active{
+    background-color: #a5132b;
+    color:#fff;
 }
 .button > a{
     display: inline-block;
@@ -25,14 +25,34 @@ main >{}
     border: 1px solid #a5132b;
     color:#a5132b;
 }
+.button a:nth-child(1).active{
+    background-color: #a5132b;
+    color:#fff;
+}
 .button > a:nth-of-type(2){
     border: 1px solid #f48200;
     color:#f48200;
 }
-
+.button a:nth-child(2).active{
+    background-color: #f48200;
+    color:#fff;
+}
 .container{
     width:100%;
 }
+.container > div:nth-of-type(1){
+    display: none;
+}
+.container > div:nth-of-type(1).active{
+    display: block;
+}
+.container > div:nth-of-type(2){
+    display: none;
+}
+.container > div:nth-of-type(2).active{
+    display: block;
+}
+
 .container  .txt{
     white-space: pre-line;
 }
@@ -92,7 +112,8 @@ main >{}
     width:100%;
     display:flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
+    margin-top: 3%;
 }
 .container .accel > a{
     width:49%;
@@ -159,7 +180,7 @@ main .title > h2{
     font-weight: 800;
     line-height: 1.5;
 }
-.button{}
+/* .button{} */
 .button > a{
     display: inline-block;
     margin: 2% 1% 2% 0;

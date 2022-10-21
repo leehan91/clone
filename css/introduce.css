@@ -3,7 +3,7 @@
 
 /* main */
 
-main{}
+
 main .title{
     padding:8% 0 0 9.3%;
 }
@@ -89,6 +89,7 @@ main .title .txt{
 }
 .director > table{
 width:100%;
+border-collapse: collapse;
 
 }
 .director > table > thead > tr > th,
@@ -100,8 +101,7 @@ width:100%;
     background-color: #667;
     border-radius: 10px;
 }
-.director > table > thead > tr{
-}
+
 .director > table > thead > tr > th{
     color:#fff;
 }
@@ -111,14 +111,16 @@ width:100%;
 .director > table > thead > tr > th:nth-of-type(2){
     width: 20%;
 }
-.director > table > tbody > tr:nth-of-type(1){
+
+.director > table > tbody tr:nth-of-type(1),
+.director > table > tbody tr:nth-of-type(6){
     margin-top: 1%;
-    border:1px solid #000;
+    border-bottom:1px solid #000;
 }
 
 /* ===============================================================1079=========================================================== */
 @media (max-width:1079px){
-    main{}
+
 main .title{
     padding:16% 0 0 6%;
 }
@@ -235,8 +237,7 @@ width:100%;
     background-color: #667;
     border-radius: 10px;
 }
-.director > table > thead > tr{
-}
+
 .director > table > thead > tr > th{
     color:#fff;
 }
@@ -248,7 +249,6 @@ width:100%;
 }
 .director > table > tbody > tr:nth-of-type(1){
     margin-top: 1%;
-    border:1px solid #000;
 }
 
 }

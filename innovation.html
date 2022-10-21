@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./css/innovation.css">
 </head>
 <body>
-    <header class="white">
-        <a href="./index.html">
+    <header class="active">
+        <a class="main_l" href="./index.html">
             <h1><img src="./img/img_logo_white.png" alt="로고"></h1>
         </a>
             <ul class="nav">
@@ -56,6 +56,54 @@
                     </button>
                 </li>
             </ul>
+            
+        <div class="bg_pre">
+            <ul class="nav_burger">
+                <li>
+                    <a href="./index.html">
+                        <h1><img src="./img/img_logo_white.png" alt="로고"></h1>
+                    </a>
+                    <a>ENG</a>
+                    <button class="trigger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </li>
+                <li>
+                    <a href="./introduce.html">재단 소개</a>
+                    <div class="sub">
+                        <a href="./introduce.html">비전과 하는일</a>
+                        <a href="#">성과 및 연혁</a>
+                        <a href="#">오시는 길</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="./innovation.html">사업 소개</a>
+                    <div>
+                        <div class="sub">
+                            <a href="#">사업모델 개발</a>
+                            <a href="#">세상파일</a>
+                            <a href="#">SK뉴스쿨</a>
+                            <a href="#">곧장 기부</a>
+                            </div>
+                        <div class="sub">
+                            <a href="#">사업모델 액설러레이팅</a>
+                            <a href="#">Social Innovators Table(SIT)</a>
+                            <a href="#">CSAP</a>
+                            <a href="#">Sunny</a>
+                            <a href="#">LOOKIE</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./news.html">뉴스룸</a>
+                </li>
+                <li>
+                    <a href="#">인재영입</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
         <div class="title">
@@ -63,12 +111,12 @@
                 행복나눔재단 사업소개
             </h2>
             <div class="button">
-                <a href="#" target="box">사업모델 개발</a>
-                <a href="#" target="box">사업모델 액설러레이팅</a>
+                <a class="active" href="#">사업모델 개발</a>
+                <a href="#">사업모델 액설러레이팅</a>
             </div>
         </div>
         <div class="container">
-            <div>
+            <div class="active">
                 <span class="txt">행복나눔재단은 재단만이 할 수 있는 방식으로 
                 사회문제를 해결하는 사업모델을 개발합니다.</span>
                 <div class="devel">
@@ -123,5 +171,7 @@
             <span><img src="./img/img_webacces.png" alt=""></span>
         </div>
     </footer>
+    <script src="./javaScript/common.js"></script>
+    <script src="./javaScript/innovation.js"></script>
 </body>
 </html>
