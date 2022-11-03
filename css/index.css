@@ -58,6 +58,7 @@ main .contents > ul > li {
 
 main .contents > ul > li:nth-of-type(1) {
   background-color: #383838;
+
 }
 main .contents > ul > li:nth-of-type(1)::after {
   background: url("../img/f1_1_bg.png") 50% 50% / cover no-repeat;
@@ -83,6 +84,10 @@ main .contents > ul > li p {
   margin: top 5.125rem;
   font-size: 1.4rem;
   white-space: pre-line;
+}
+main .contents > ul > li >.show {
+  position:relative;
+  z-index: 10;
 }
 main .contents > ul > li .detail {
   display: inline-block;
