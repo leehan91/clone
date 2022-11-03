@@ -2,7 +2,7 @@ $(function () {
   $("body").prepend("<header></header>");
   $("body").append("<footer></footer>");
 
-  $("header").load("./common.html .header" , start);
+  $("header").load("./common.html .header", start);
   $("footer").load("./common.html .footer");
 
   function start() {
@@ -37,33 +37,34 @@ $(function () {
       }
     };
 
-// ==================================================================storage=================================================================
+    // ==================================================================storage=================================================================
 
     //header에 index페이지만 .active가 사라지고
     // 나머지 페이지는 유지
     const elFix = document.querySelectorAll(".nav > li");
-    let pag = window.location.pathname;
+    let pag = window.location.pathname.split("/");
+    pag = pag[pag.length - 1];
+    console.log(pag);
     let pageIndex = () => {
-      if (pag == "/index.html") {
+      if (pag == "index.html") {
         localStorage.page = 0;
-      } else if (pag == "/introduce.html") {
+      } else if (pag == "introduce.html") {
         localStorage.page = 1;
         elFix[0].classList.add("active");
-      } else if (pag == "/innovation.html") {
+      } else if (pag == "innovation.html") {
         localStorage.page = 2;
         elFix[1].classList.add("active");
-      } else if (pag == "/news.html") {
+      } else if (pag == "news.html") {
         localStorage.page = 3;
         elFix[2].classList.add("active");
       }
     };
     pageIndex();
 
-
     // =================================================================scroll================================================================
     const elBtn = document.querySelector(".btn");
 
-    if ( localStorage.page != 0) {
+    if (localStorage.page != 0) {
       elHeader.classList.add("active");
       elH1.setAttribute("src", `./img/img_logo_white.png`);
     }
@@ -80,7 +81,5 @@ $(function () {
         elH1.setAttribute("src", `./img/img_logo_black.png`);
       }
     });
-
-
   }
 });
