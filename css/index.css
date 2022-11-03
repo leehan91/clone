@@ -3,495 +3,401 @@
 
 /* main */
 /*visual */
-main{
-    width:100%;
+main {
+  width: 100%;
 }
-main > .visual{
-    width: 100%;
-    height: 100vh;
-    padding: 0 8.3% 0 9.3%;
-    background: url("../img/visual.gif") 0 0 / cover no-repeat;
-    background-color: #f4f4f4;
+main > .visual {
+  width: 100%;
+  height: 100vh;
+  padding: 0 8.3% 0 9.3%;
+  background: url("../img/visual.gif") 0 0 / cover no-repeat;
+  background-color: #f4f4f4;
 }
-main > .visual > div{
-    width:60%;
-    padding-top: 15.625rem;
+main > .visual > div {
+  width: 60%;
+  padding-top: 15.625rem;
 }
-main > .visual > div > b{
-    display: block;
-    color:#e22727;
-    white-space: pre-line;
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin-bottom: 2.3rem;
+main > .visual > div > b {
+  display: block;
+  color: #e22727;
+  white-space: pre-line;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 2.3rem;
+  transition-delay: 100ms;
 }
-main > .visual > div > p{
-    font-size: 1.4rem;
-    margin-bottom: 3.5rem;
+main > .visual > div > p {
+  font-size: 1.4rem;
+  margin-bottom: 3.5rem;
+  transition-delay: 300ms;
+}
+main > .visual > div > b,
+main > .visual > div > p {
+  transform: translateX(-70%);
+}
+main > .visual > div.active > b,
+main > .visual > div.active > p {
+  transition: transform 1600ms cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 1600ms ease-out;
+  transform: translateX(0%) !important;
 }
 /* contents */
-main .contents{width:100%}
-main .contents > ul{
-    width: 100%;
-    /* height: 1000px; */
+main .contents {
+  width: 100%;
 }
-main .contents > ul > li{
-    width: 100%;
-    height: 36.375rem;
-    padding: 0 8.3% 0 9.3%;
+main .contents > ul {
+  width: 100%;
+  /* height: 1000px; */
 }
-main .contents > ul > li:nth-of-type(1){
-    background: url("../img/f1_5_bg.png") 50% 50% / cover no-repeat ;
-    animation: background-changer 5s infinite;
-    transition: all 0.4s ease;
-    background-color: #383838;
-    
-}
-main .contents > ul > li:nth-of-type(1)::after{
-    background: url("../img/f1_1_bg.png") 50% 50% / cover no-repeat ;
-    background-color: #383838;
-
-}
-main .contents > ul > li:nth-of-type(2){
-    background: url("../img/f2_bg.png") 50% 50% / cover no-repeat ;
-    background-color: #8c1c1c;
-}
-main .contents > ul > li:nth-of-type(3){
-    background: url("../img/f3_bg.png") 50% 50% / cover no-repeat ;
-    background-color: #f27700;
+main .contents > ul > li {
+  width: 100%;
+  height: 36.375rem;
+  padding: 0 8.3% 0 9.3%;
+  overflow: hidden;
 }
 
-main .contents > ul > li > h2{
-    color: #fff;
-    padding-top:5.625rem;
-    font-size:2.8rem;
-    white-space: pre-line;
+main .contents > ul > li:nth-of-type(1) {
+  background-color: #383838;
 }
-main .contents > ul > li > p{
-    color: #fff;
-    margin: top 5.125rem;;
-    font-size:1.4rem;    
-    white-space: pre-line;
+main .contents > ul > li:nth-of-type(1)::after {
+  background: url("../img/f1_1_bg.png") 50% 50% / cover no-repeat;
+  background-color: #383838;
 }
-main .contents > ul > li > .detail{
-    display: inline-block;
-    justify-content: space-around;
-    border-radius: 40px;
-    margin: 4.6875rem 0;
-    padding: 0.9375rem 1.5625rem;
+main .contents > ul > li:nth-of-type(2) {
+  background: url("../img/f2_bg.png") 50% 50% / cover no-repeat;
+  background-color: #8c1c1c;
 }
-main .contents > ul > li:nth-of-type(1) .detail{
-    background-color: #777;
-}
-main .contents > ul > li:nth-of-type(2) .detail{
-    background-color: #c60924;
-}
-main .contents > ul > li:nth-of-type(3) .detail{
-    background-color: #d65803;
+main .contents > ul > li:nth-of-type(3) {
+  background: url("../img/f3_bg.png") 50% 50% / cover no-repeat;
+  background-color: #f27700;
 }
 
-main .contents > ul > li > span > a{
-color: #fff;
+main .contents > ul > li h2 {
+  color: #fff;
+  padding-top: 5.625rem;
+  font-size: 2.8rem;
+  white-space: pre-line;
+}
+main .contents > ul > li p {
+  color: #fff;
+  margin: top 5.125rem;
+  font-size: 1.4rem;
+  white-space: pre-line;
+}
+main .contents > ul > li .detail {
+  display: inline-block;
+  cursor:pointer;
+  justify-content: space-around;
+  border-radius: 40px;
+  margin: 4.6875rem 0;
+  padding: 0.9375rem 1.5625rem;
+}
+main .contents > ul > li:nth-of-type(1) .detail {
+  background-color: #777;
+}
+main .contents > ul > li:nth-of-type(2) .detail {
+  background-color: #c60924;
+}
+main .contents > ul > li:nth-of-type(3) .detail {
+  background-color: #d65803;
+}
+
+main .contents > ul > li span > a {
+  color: #fff;
+  z-index:10;
 }
 main .contents > ul > li .button {
-    display: inline-block;
+  display: inline-block;
 }
-main .contents > ul > li .button > a{
-    display: inline-block;
-    margin-top: 23%;
-    border: 1px solid #fff;
-    border-radius: 15px;
-    font-size:1.6rem;
-    padding: 0.625rem 1.25rem;
+main .contents > ul > li .button > a {
+  display: inline-block;
+  margin-top: 23%;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  font-size: 1.6rem;
+  padding: 0.625rem 1.25rem;
 }
-main .contents > ul > li > span > img{
-    border-radius: 50%;
-    background-color: #fff;
-    font-size:1.3rem;
-    margin-left:1.5625rem;
+main .contents > ul > li span > img {
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 1.3rem;
+  margin-left: 1.5625rem;
 }
 
 /* news */
-main .news{
-    display: block;
-    width:100%;
-    padding: 0 8.3% 147px 9.3%;
-    background-color: #e6e6e6;
+main .news {
+  display: block;
+  width: 100%;
+  padding: 0 8.3% 147px 9.3%;
+  background-color: #e6e6e6;
 }
-main .news > h2{
-    padding: 4rem 0 2.9375rem 0;
+main .news > h2 {
+  padding: 4rem 0 2.9375rem 0;
 }
-main .news > ul{
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
+main .news > ul {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
 }
-main .news > ul > li{
-    width: 33%;
-    padding: 1.5625rem;
+main .news > ul > li {
+  width: 33%;
+  padding: 1.5625rem;
 }
-main .news > ul > li > figure{
-    width:100%;
+main .news > ul > li > figure {
+  width: 100%;
 }
 main .news > ul > li > figure > img {
-    width:100%;
-    transition: .8s;
+  width: 100%;
+  transition: 0.8s;
+  border-radius: 15px;
 }
-main .news > ul > li > figure > img >figcaption{
-    color: #8b95a1;
-    font-size: 1.1rem;
+main .news > ul > li > figure > figcaption {
+  color: #8b95a1;
+  font-size: 1.1rem;
 }
-main .news > ul > li:hover > figure > img{
-transform: translateY(-5%);
-box-shadow: 10px 10px 8px rgba(0,0,0,0.3);
-}
-
-main .news > ul > li > b{
-    white-space: pre-line;
-    margin:0 auto;
-}
-main .news > ul > li > p{
-    font-size: 1.1rem;
-    color: #8b95a1;
+main .news > ul > li:hover > figure > img {
+  transform: translateY(-5%);
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
 }
 
+main .news > ul > li > b {
+  white-space: pre-line;
+  margin: 0 auto;
+}
+main .news > ul > li > p {
+  font-size: 1.1rem;
+  color: #8b95a1;
+}
+.contents > ul > li > div,
+.news > h2,
+.news li {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 1.5s;
+}
+main .contents > ul > li div.active,
+.news > h2.active,
+.news li.active {
+  opacity: 2;
+  transform: translateY(0%);
+}
+.news li:nth-of-type(1) {
+  transition-delay: 400ms;
+}
+.news li:nth-of-type(2) {
+  transition-delay: 500ms;
+}
+.news li:nth-of-type(3) {
+  transition-delay: 600ms;
+}
 
+/* bg_change */
+.contents > ul > li:nth-of-type(1) {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.contents > ul > li > .bg_div {
+  position:absolute;
+  top:0;bottom:0;left:0;right:0;
+  width: 53.9%;
+  width: 100%;
+  transform: translateY(0%);
+  opacity: 1;
+  z-index:1;
+}
+.contents > ul > li .bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #383838;
+  z-index:1;
+}
+.change1 {
+  width: 100%;
+  left: 0%;
+  opacity: 0.5;
+  animation: background-changer 10s infinite;
+  animation-timing-function: linear;
+  background-size: 100%;
+  transition: all 0.4s ease;
+}
+.change2 {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-size: 100%;
+  animation-name: background-changer2;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes background-changer {
+  0% {
+    background: url(../img/f1_bg.png) no-repeat 100% / cover;
+  }
+  33.3% {
+    background: url(../img/f1_a_bg.png) no-repeat 100% / cover;
+  }
+  66.6% {
+    background: url(../img/f1_b_bg.png) no-repeat 100% / cover;
+  }
+  100% {
+    background: url(../img/f1_bg.png) no-repeat 100% / cover;
+  }
+}
+@keyframes background-changer2 {
+  0% {
+    background: url(../img/f1_1_bg.png) no-repeat center / cover;
+  }
+  33.3% {
+    background: url(../img/f1_3_bg.png) no-repeat center / cover;
+  }
+  66.6% {
+    background: url(../img/f1_5_bg.png) no-repeat center / cover;
+  }
+  100% {
+    background: url(../img/f1_1_bg.png) no-repeat center / cover;
+  }
+}
 /* ===============================================================1079=========================================================== */
-@media (max-width:1079px){
-    main{
-        width:100%;
-    }
-    main > .visual{
-        width: 100%;
-        height: 100vh;
-        padding:  3%;
-        background: url("../img/visual.gif") center center / cover no-repeat;
-        background-color: #f4f4f4;
-    }
-    main > .visual > div{
-        width:60%;
-        padding-top: 10rem;
-    }
-    main > .visual > div > b{
-        display: block;
-        color:#e22727;
-        white-space: pre-line;
-        font-size: 3.1rem;
-        font-weight: 800;
-        margin-bottom: 2rem;
-    }
-    main > .visual > div > p{
-        font-size: 1.4rem;
-        margin-bottom: 3.5rem;
-    }
-    /* contents */
-    main .contents{width:100%}
-    main .contents > ul{
-        width: 100%;
-    }
-    main .contents > ul > li{
-        width: 100%;
-        height: 22rem;
-        padding: 0 0 0 3%;
-    }
-    main .contents > ul > li:nth-of-type(1){
-        background: url("../img/f1_5_bg.png") 50% 50% / cover no-repeat ;
-        animation: background-changer 5s infinite;
-        transition: all 0.4s ease;
-        background-color: #383838;
-        
-    }
-    main .contents > ul > li:nth-of-type(1)::after{
-        background: url("../img/f1_1_bg.png") center center / cover no-repeat ;
-        background-color: #383838;
-    
-    }
-    main .contents > ul > li:nth-of-type(2){
-        background: url("../img/f2_bg.png") center center / cover no-repeat ;
-        background-color: #8c1c1c;
-    }
-    main .contents > ul > li:nth-of-type(3){
-        background: url("../img/f3_bg.png") center center / cover no-repeat ;
-        background-color: #f27700;
-    }
-    
-    main .contents > ul > li > h2{
-        color: #fff;
-        font-size:1.2rem;
-        white-space: pre-line;
-        padding-top:0;
-    }
-    main .contents > ul > li:nth-of-type(1) > h2{
-        padding-top:3.625rem;
-    }
-    main .contents > ul > li > p{
-        color: #fff;
-        margin-top : 1.5rem;
-        font-size:0.9rem;    
-        white-space: pre-line;
-    }
-    main .contents > ul > li > .detail{
-        display: inline-block;
-        justify-content: space-around;
-        border-radius: 40px;
-        margin: 2.5rem 0 0;
-        padding: 15px 12px 15px 15px;
-    }
-    main .contents > ul > li:nth-of-type(1) .detail{
-        background-color: #777;
-    }
-    main .contents > ul > li:nth-of-type(2) .detail{
-        background-color: #c60924;
-    }
-    main .contents > ul > li:nth-of-type(3) .detail{
-        background-color: #d65803;
-    }
-    
-    main .contents > ul > li > span > a{
-    color: #fff;
-    }
-    main .contents > ul > li .button {
-        display: inline-block;
-    }
-    main .contents > ul > li .button > a{
-        display: inline-block;
-        margin: 2rem 0 1rem 1rem;
-        border: 1px solid #fff;
-        border-radius: 15px;
-        font-size:1rem;
-        padding: 0.625rem 1.25rem;
-    }
-    main .contents > ul > li > span > img{
-        border-radius: 50%;
-        width:24px;
-        height:24px;
-        background-color: #fff;
-        font-size:1.3rem;
-        margin-left:1.5625rem;
-    }
-    
-    /* news */
-    main .news{
-        display: block;
-        width:100%;
-        padding: 0 8.3% 147px 9.3%;
-        background-color: #e6e6e6;
-    }
-    main .news > h2{
-        padding: 1rem 0 2.9375rem 0;
-    }
-    main .news > ul{
-        background-color: #fff;
-        display: flex;
-        justify-content: space-between;
-        border-radius: 20px;
-    }
-    main .news > ul > li{
-        width: 30%;
-        padding: 1.5625rem;
-    }
-    main .news > ul > li > figure{
-        width:100%;
-    }
-    main .news > ul > li > figure > img {
-        width:100%;
-        transition: .8s;
-    }
-    main .news > ul > li > figure >figcaption{
-        color: #8b95a1;
-        font-size: 0.9rem;
-    }
-    main .news > ul > li:hover > figure > img{
+@media (max-width: 1079px) {
+  main > .visual {
+    padding: 3%;
+  }
+  main > .visual > div {
+    padding-top: 10rem;
+  }
+  main > .visual > div > b {
+    font-size: 3.1rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+  /* contents */
+  main .contents > ul > li {
+    height: 22rem;
+    padding: 0 0 0 3%;
+  }
+  main .contents > ul > li:nth-of-type(1)::after {
+    background: url("../img/f1_1_bg.png") center center / cover no-repeat;
+    background-color: #383838;
+  }
+  main .contents > ul > li h2 {
+    font-size: 1.2rem;
+    padding-top: 0;
+  }
+  main .contents > ul > li:nth-of-type(1) h2 {
+    padding-top: 3.625rem;
+  }
+  main .contents > ul > li p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
+  main .contents > ul > li .detail {
+    margin: 2.5rem 0 0;
+    padding: 15px 12px 15px 15px;
+  }
+
+  main .contents > ul > li .button > a {
+    margin: 2rem 0 1rem 1rem;
+    font-size: 1rem;
+  }
+  main .contents > ul > li span > img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* news */
+
+  main .news > h2 {
+    padding: 1rem 0 2.9375rem 0;
+  }
+  main .news > ul {
+    border-radius: 20px;
+  }
+  main .news > ul > li {
+    width: 30%;
+  }
+  main .news > ul > li > figure > figcaption {
+    font-size: 0.9rem;
+  }
+  main .news > ul > li:hover > figure > img {
     transform: translateY(-5%);
-    box-shadow: 10px 10px 8px rgba(0,0,0,0.3);
-    }
-    
-    main .news > ul > li > b{
-        white-space: pre-line;
-        margin:0 auto;
-    }
-    main .news > ul > li > p{
-        font-size: 0.9rem;
-        color: #8b95a1;
-    }
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
+  }
+  main .news > ul > li > p {
+    font-size: 0.9rem;
+  }
 }
 
 /* =============================================1024========================================= */
-@media (max-width:1024px){
-    main > .visual > div > b{
-        display: block;
-        color:#e22727;
-        white-space: pre-line;
-        font-size: 1.7rem;
-        font-weight: 800;
-        margin-bottom: 2rem;
-    }
+@media (max-width: 1024px) {
+  main > .visual > div > b {
+    font-size: 1.7rem;
+  }
 }
 
 /* ============================================================640=============================================================== */
-@media (max-width: 640px){
-    main{
-        width:100%;
-    }
-    main > .visual{
-        width: 100%;
-        height: 100vh;
-        padding: 0 3%;
-        background: url("../img/visual.gif") center center / cover no-repeat;
-        background-color: #f4f4f4;
-        background-position: right -200px bottom;
-    }
-    main > .visual > div{
-        width:50%;
-        padding-top: 11rem;
-    }
-    main > .visual > div > b{
-        display: block;
-        color:#e22727;
-        white-space: pre-line;
-        font-size: 1.7rem;
-        font-weight: bold;
-        margin-bottom: 2rem;
-    }
-    main > .visual > div > p{
-        font-size: 1rem;
-        margin-bottom: 3.5rem;
-    }
-    /* contents */
-    main .contents{width:100%}
-    main .contents > ul{
-        width: 100%;
-    }
-    main .contents > ul > li{
-        width: 100%;
-        height: 20rem;
-        padding: 0 0 0 3%;
-    }
-    main .contents > ul > li:nth-of-type(1){
-        background: url("../img/f1_5_bg.png") 50% 50% / cover no-repeat ;
-        animation: background-changer 5s infinite;
-        transition: all 0.4s ease;
-        background-color: #383838;
-        
-    }
-    main .contents > ul > li:nth-of-type(1)::after{
-        background: url("../img/f1_1_bg.png") center center / cover no-repeat ;
-        background-color: #383838;
-    
-    }
-    main .contents > ul > li:nth-of-type(2){
-        background: url("../img/f2_bg.png") center center / cover no-repeat ;
-        background-color: #8c1c1c;
-        height: 16.5rem;
-    }
-    main .contents > ul > li:nth-of-type(3){
-        background: url("../img/f3_bg.png") center center / cover no-repeat ;
-        background-color: #f27700;
-        height: 16.5rem;
-    }
-    
-    main .contents > ul > li > h2{
-        color: #fff;
-        font-size:1.2rem;
-        white-space: pre-line;
-        padding-top:0;
-    }
-    main .contents > ul > li:nth-of-type(1) > h2{
-        padding-top:3.625rem;
-    }
-    main .contents > ul > li > p{
-        color: #fff;
-        margin-top : 1.5rem;
-        font-size:0.9rem;    
-        white-space: pre-line;
-    }
-    main .contents > ul > li > .detail{
-        display: flex;
-        justify-content: space-between;
-        border-radius: 40px;
-        margin: 2.5rem 0 0;
-        padding: 15px 12px 15px 15px;
-        width:155px;
-    }
-    main .contents > ul > li > .detail > a{
-        width:70%;
-        display: inline-block;
-    }
-    main .contents > ul > li:nth-of-type(1) .detail{
-        background-color: #777;
-    }
-    main .contents > ul > li:nth-of-type(2) .detail{
-        background-color: #c60924;
-    }
-    main .contents > ul > li:nth-of-type(3) .detail{
-        background-color: #d65803;
-    }
-    
-    main .contents > ul > li > span > a{
-    color: #fff;
-    }
-    main .contents > ul > li .button {
-        display: inline-block;
-    }
-    main .contents > ul > li .button > a{
-        display: inline-block;
-        margin: 2rem 0 0 1rem;
-        border: 1px solid #fff;
-        border-radius: 15px;
-        font-size:1rem;
-        padding: 0.625rem 1.25rem;
-    }
-    main .contents > ul > li > span > img{
-        border-radius: 50%;
-        width:24px;
-        height:24px;
-        background-color: #fff;
-        font-size:1.rem;
-        margin-left:1.5625rem;
-    }
-    
-    /* news */
-    main .news{
-        display: block;
-        width:100%;
-        padding: 0 8.3% 147px 9.3%;
-        background-color: #e6e6e6;
-    }
-    main .news > h2{
-        padding: 4rem 0 2.9375rem 0;
-    }
-    main .news > ul{
-        background-color: #fff;
-        display: block;
-        justify-content: space-between;
-        border-radius: 20px;
-    }
-    main .news > ul > li{
-        width: 100%;
-        padding: 1.5625rem;
-    }
-    main .news > ul > li > figure{
-        width:100%;
-    }
-    main .news > ul > li > figure > img {
-        width:100%;
-        transition: .8s;
-    }
-    main .news > ul > li > figure >figcaption{
-        color: #8b95a1;
-        font-size: 0.9rem;
-    }
-    main .news > ul > li:hover > figure > img{
+@media (max-width: 640px) {
+  main > .visual {
+    padding: 0 3%;
+    background-position: right -200px bottom;
+  }
+  main > .visual > div {
+    width: 50%;
+    padding-top: 11rem;
+  }
+  main > .visual > div > p {
+    font-size: 1rem;
+  }
+  /* contents */
+  main .contents > ul > li {
+    width: 100%;
+    height: 20rem;
+    padding: 0 0 0 3%;
+  }
+  main .contents > ul > li:nth-of-type(1)::after {
+    background: url("../img/f1_1_bg.png") center center / cover no-repeat;
+    background-color: #383838;
+  }
+  main .contents > ul > li:nth-of-type(2) {
+    height: 16.5rem;
+  }
+  main .contents > ul > li:nth-of-type(3) {
+    height: 16.5rem;
+  }
+  main .contents > ul > li > .detail {
+    display: flex;
+    justify-content: space-between;
+    width: 155px;
+  }
+  main .contents > ul > li > .detail > a {
+    width: 70%;
+    display: inline-block;
+  }
+  main .contents > ul > li .button > a {
+    margin: 2rem 0 0 1rem;
+  }
+  main .contents > ul > li > span > img {
+    font-size: 1rem;
+  }
+
+  /* news */
+  main .news > h2 {
+    padding: 4rem 0 2.9375rem 0;
+  }
+  main .news > ul {
+    display: block;
+  }
+  main .news > ul > li {
+    width: 100%;
+  }
+  main .news > ul > li:hover > figure > img {
     transform: translateY(-5%);
-    box-shadow: 10px 10px 8px rgba(0,0,0,0.3);
-    }
-    
-    main .news > ul > li > b{
-        white-space: pre-line;
-        margin:0 auto;
-    }
-    main .news > ul > li > p{
-        font-size: 0.9rem;
-        color: #8b95a1;
-    }
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
+  }
 }

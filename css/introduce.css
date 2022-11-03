@@ -51,7 +51,7 @@ main .title .txt{
     display:inline-block;
     border: 1px solid #e43737;
     padding: 16px 44px;
-    font-size: 1.0rem;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
     color:#e43737;
@@ -59,6 +59,9 @@ main .title .txt{
 }
 .way{
     padding: 0 9.3%;
+}
+.way b{
+    margin-top:10%;
 }
 .way .work{
     width:100%;
@@ -117,6 +120,24 @@ border-collapse: collapse;
     margin-top: 1%;
     border-bottom:1px solid #000;
 }
+.d-200ms, .d-300ms, .d-400ms{
+    transform: translateY(100%);
+    opacity:0;
+    transition: transform 1.5s;
+}
+.d-200ms.appear, .d-300ms.appear, .d-400ms.appear{
+    transform: translateY(0%);
+    opacity:1;
+}
+.d-200ms{
+    transition-delay: transform 200ms;
+}
+.d-300ms{
+    transition-delay: transform 300ms;
+}
+.d-400ms{
+    transition-delay: transform 400ms;
+}
 
 /* ===============================================================1079=========================================================== */
 @media (max-width:1079px){
@@ -125,12 +146,7 @@ main .title{
     padding:16% 0 0 6%;
 }
 main .title > h2{
-    font-size:3.1rem;
-    color:#e43737;
     font-weight: 800;
-}
-main .title .txt{
-    margin-top:1rem;
 }
 
 .vision{
@@ -158,7 +174,6 @@ main .title .txt{
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content: space-between;
 }
 .todo > div{
     width:100%;
@@ -177,67 +192,29 @@ main .title .txt{
 .todo > div > img{width:68%}
 .txt{
     font-size:1rem;
-    text-align: left;
-    color: #292929;
-    font-weight: bold;
     white-space: normal;
-    margin-top :1rem;
 }
 
 .button{
-    display:inline-block;
-    border: 1px solid #e43737;
-    padding: 16px 44px;
     font-size: 2.2rem;
-    font-weight: bold;
-    text-align: center;
-    color:#e43737;
-    border-radius: 12px;
 }
 .way{
     padding: 3% 5.3%;
 }
 .way .work{
-    width:100%;
-    display: flex;
-    justify-content: space-between;
     margin-top:2rem;
 }
-.way .work li{
-    width:30%;
-    border:1px solid #e43737;
-    border-radius: 20px;
-}
-.way .work li > figure{width:100%;}
-.way .work li > figure >img{width: 100%;}
-.way .work li > figure figcaption{
-    padding:15% 13%;
-}
-.way .work li > figure figcaption > b{
-    white-space: pre-line;
-}
-
 .director{
     padding: 0 6% 46px 5%;
-    text-align: center;
 }
 .director .button{
     margin: 40px auto 50px;
-}
-.director > table{
-width:100%;
-
 }
 .director > table > thead > tr > th,
 .director > table > tbody > tr > td{
     text-align: left;
     padding:2% 2%;
 }
-.director > table > thead{
-    background-color: #667;
-    border-radius: 10px;
-}
-
 .director > table > thead > tr > th{
     color:#fff;
 }
@@ -256,9 +233,6 @@ width:100%;
 
 /* ====================================================================================767============================================================================== */
 @media (max-width:767px){
-    .way{
-        padding: 3% 5.3%;
-    }
     .way .work{
         width:100%;
         display: flex;
@@ -286,13 +260,7 @@ width:100%;
         font-weight: 500;
     }
     .button{
-        display:inline-block;
-        border: 1px solid #e43737;
         padding: 13px 25px;
         font-size: 1rem;
-        font-weight: bold;
-        text-align: center;
-        color:#e43737;
-        border-radius: 12px;
     }
 }
