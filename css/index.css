@@ -58,7 +58,6 @@ main .contents > ul > li {
 
 main .contents > ul > li:nth-of-type(1) {
   background-color: #383838;
-
 }
 main .contents > ul > li:nth-of-type(1)::after {
   background: url("../img/f1_1_bg.png") 50% 50% / cover no-repeat;
@@ -81,17 +80,17 @@ main .contents > ul > li h2 {
 }
 main .contents > ul > li p {
   color: #fff;
-  margin: top 5.125rem;
+  margin-top: 5.125rem;
   font-size: 1.4rem;
   white-space: pre-line;
 }
-main .contents > ul > li >.show {
-  position:relative;
+main .contents > ul > li > .show {
+  position: relative;
   z-index: 10;
 }
 main .contents > ul > li .detail {
   display: inline-block;
-  cursor:pointer;
+  cursor: pointer;
   justify-content: space-around;
   border-radius: 40px;
   margin: 4.6875rem 0;
@@ -109,7 +108,7 @@ main .contents > ul > li:nth-of-type(3) .detail {
 
 main .contents > ul > li span > a {
   color: #fff;
-  z-index:10;
+  z-index: 10;
 }
 main .contents > ul > li .button {
   display: inline-block;
@@ -203,13 +202,16 @@ main .contents > ul > li div.active,
   justify-content: space-between;
 }
 .contents > ul > li > .bg_div {
-  position:absolute;
-  top:0;bottom:0;left:0;right:0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 53.9%;
   width: 100%;
   transform: translateY(0%);
   opacity: 1;
-  z-index:1;
+  z-index: 1;
 }
 .contents > ul > li .bg {
   position: absolute;
@@ -217,7 +219,7 @@ main .contents > ul > li div.active,
   right: 0;
   bottom: 0;
   background-color: #383838;
-  z-index:1;
+  z-index: 1;
 }
 .change1 {
   width: 100%;
