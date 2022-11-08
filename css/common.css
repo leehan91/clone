@@ -445,7 +445,7 @@ body {
   }
   /* Back to top */
   .btn {
-    display: inline-block;
+    display: none;
   }
 }
 

@@ -46,7 +46,7 @@ $(function () {
     pag = pag[pag.length - 1];
     console.log(pag);
     let pageIndex = () => {
-      if (pag == "index.html") {
+      if (pag == "index.html" || pag == "") {
         localStorage.page = 0;
       } else if (pag == "introduce.html") {
         localStorage.page = 1;
